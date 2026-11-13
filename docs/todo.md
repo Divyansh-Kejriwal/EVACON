@@ -4,14 +4,14 @@
 
 ### 1. Verify Graph Representation
 
-- [ ] Confirm `Graph`, `nodes`, and `edges` work correctly.
-- [ ] Test that nodes can be retrieved using their IDs.
-- [ ] Test that edge information can be accessed:
-- [ ] Start node
-- [ ] End node
-- [ ] Distance
-- [ ] Width
-- [ ] Make `show()` output readable enough to inspect the graph.
+- ✔ Confirm `Graph`, `nodes`, and `edges` work correctly.
+- ✔ Test that nodes can be retrieved using their IDs.
+- ✔ Test that edge information can be accessed:
+- ✔ Start node
+- ✔ End node
+- ✔ Distance
+- ✔ Width
+- ✔ Make `show()` output readable enough to inspect the graph.
 
 ### 2. Decide Graph Design
 

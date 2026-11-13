@@ -13,15 +13,36 @@ class edges:
 
 class Graph:
     def __init__(self):
-        self.nodes = {}
-        self.edges = []
+        self.nodes_dict = {}
+        self.edges_list = []
 
     def add_node(self, node):
-        self.nodes[node.id] = node
+        self.nodes_dict[node.id] = node
 
     def add_edge(self, edge):
-        self.edges.append(edge) 
+        self.edges_list.append(edge) 
 
-    def show(self):
-        print(self.nodes)
-        print(self.edges)
+    def show_node_data(self, node_id):
+
+        self.id = node_id
+        get_node = self.nodes_dict.get(self.id)
+
+        if get_node:
+            print(f"The id of node is {get_node.id}")
+            print(f"The type of node is {get_node.type}")
+            print(f"The population of node is {get_node.population}\n")
+        else:
+            print("this node doesn't exist")
+
+    def show_edge_data(self,edge_id):
+
+        self.id = edge_id
+        get_edge = self.edges_list[edge_id]
+        
+        if get_edge:
+            print(f"The starting point of edge is {get_edge.start.id}")
+            print(f"The eding point of edge is {get_edge.end.id}")
+            print(f"The distance from start to end is {get_edge.distance} m")
+            print(f"The width of edge is {get_edge.width} m\n")
+        else:
+            print("this edge doesn't exist")        

@@ -24,6 +24,6 @@ graph.add_node(B)
 graph.add_node(C)
 graph.add_node(e1)
 graph.add_node(e2)
-print("Done!")
 
-graph.show()
+graph.show_node_data("A")
+graph.show_edge_data(0)
