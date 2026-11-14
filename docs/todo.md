@@ -15,9 +15,9 @@
 
 ### 2. Decide Graph Design
 
-- [ ] Decide whether edges should be directed or undirected.
-- [ ] Decide how connected nodes will be found from the graph.
-- [ ] Keep physical properties separate from routing calculations.
+- ✔ Decide whether edges should be directed or undirected.
+- ✔ Decide how connected nodes will be found from the graph.
+- ✔ Keep physical properties separate from routing calculations.
 
 ### 3. Build the First Routing Algorithm
 

@@ -26,4 +26,4 @@ graph.add_node(e1)
 graph.add_node(e2)
 
 graph.show_node_data("A")
-graph.show_edge_data(0)
+graph.show_edge_data(AB)
