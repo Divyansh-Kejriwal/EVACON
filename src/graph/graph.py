@@ -68,7 +68,3 @@ class Graph:
 
         except:
             print("this edge doesn't exist")        
-
-        ## Testing
-        print(self.edges_dict)
-        print(self.adj)
