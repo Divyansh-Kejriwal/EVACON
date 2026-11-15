@@ -16,6 +16,7 @@ class Graph:
     def __init__(self):
         self.nodes_dict = {}
         self.edges_list = []
+        self.edges_dict = {}## retrives edge by edge id 
         self.adj = {}       ## for adjecny of nodes in outgoing direction and its a dict of list by node id
 
     def add_node(self, node):
@@ -30,13 +31,17 @@ class Graph:
             if i.start.id == edge.start.id and i.end.id == edge.end.id and edge.uid == None:
                 u += 1
         edge.uid = f"{str(edge.start.id)}{str(edge.end.id)}{str(u)}"
+
+        # For accessing each edge easily 
+        self.edges_dict[edge.uid] = edge
+
         # For adjancy purpose
 
         if edge.start.id not in self.adj:
             outgoing_edges = []
             outgoing_edges.append(edge)
             node_outgoing = edge.start.id
-            self.adj.update((node_outgoing,outgoing_edges))
+            self.adj[node_outgoing] = outgoing_edges
         elif edge.start.id in self.adj.keys():
             self.adj[edge.start.id].append(edge)
 
@@ -63,3 +68,7 @@ class Graph:
 
         except:
             print("this edge doesn't exist")        
+
+        ## Testing
+        print(self.edges_dict)
+        print(self.adj)
