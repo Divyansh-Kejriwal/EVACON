@@ -10,14 +10,18 @@ Given a network, a starting node, a destination, and a movement speed, what is t
 Function
 ` def dijkstra(adjacency, start, destination, speed):
     pass `
+
 What the function should return
+
 If a route exists:
 (path, total_time)
 Example:
 ([A, B, C, exit1], 15.0)
 If the destination is unreachable:
 (None, infinity)
+
 Dijkstra — Build It Step by Step
+
 Step 1 — State we need
 Inside the function:
 distances = {}
@@ -35,9 +39,9 @@ The starting node gets 0.
 
 Every other node initially gets:
 float("inf")
+
 Step 2 — Initialize distances
 Do not hard-code node names.
-
 Use the adjacency argument.
 
 Hint:
@@ -54,9 +58,9 @@ Important catch
 An exit/destination may have no outgoing edges, so it may not appear as a key in adjacency.
 
 Think about how you will make sure every relevant node can still receive a distance.
+
 Step 3 — previous
 We need to reconstruct the final path.
-
 Example:
 previous:
 B → A
@@ -65,6 +69,7 @@ exit1 → C
 This means:
 A → B → C → exit1
 Use a dictionary.
+
 Step 4 — visited
 Keep track of nodes whose shortest known distance has been finalized.
 
@@ -73,6 +78,7 @@ visited = []
 Do not optimize this yet.
 
 Correctness first.
+
 Step 5 — Main Dijkstra loop
 The basic logic is:
 while there are still nodes to process:
@@ -98,6 +104,7 @@ while there are still nodes to process:
             update distances
 
             update previous
+
 Step 6 — Edge travel time
 For the first version, width is intentionally ignored.
 
@@ -112,6 +119,7 @@ where:
 - v = movement speed
 - t = traversal time
 Width will become important later when population and congestion are introduced.
+
 Step 7 — Path reconstruction
 Once the destination has been reached, use previous to work backwards.
 
