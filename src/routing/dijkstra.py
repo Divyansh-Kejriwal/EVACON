@@ -1,5 +1,3 @@
-from graph.graph import Graph
-
 def dijkstra(adjacency, start, destination, speed):
 
     distances = {}
@@ -15,7 +13,6 @@ def dijkstra(adjacency, start, destination, speed):
         distances[destination.id] = float("inf")
 
     # Processing the distances
-
     current_node = start
 
     while current_node != destination:
