@@ -22,9 +22,9 @@
 ### 3. Build the First Routing Algorithm
 
 - ✔ Define what "best route" means for the first version.
-- [ ] Implement Dijkstra's algorithm.
-- [ ] Test Dijkstra on the small manual evacuation network.
-- [ ] Verify that the algorithm can find a route from a room to an exit.
+- ✔ Implement Dijkstra's algorithm.
+- ✔ Test Dijkstra on the small manual evacuation network.
+- ✔ Verify that the algorithm can find a route from a room to an exit.
 - [ ] Test multiple possible routes and compare their costs.
 
 ### 4. Connect Routing to EVACON

@@ -67,4 +67,4 @@ class Graph:
             print(f"The width of edge is {get_edge.width} m\n")
 
         except:
-            print("this edge doesn't exist")        
+            print("this edge doesn't exist")      
